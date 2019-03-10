@@ -1,0 +1,157 @@
+/*CSS file*/
+html
+{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
+
+html,
+body /*adjusting alignments and font of body*/
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: garamond;
+}
+
+.container /*div alignments*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading /*font of heading*/
+{
+    font: 300 40px garamond; /*short hand css*/
+}
+
+.deck /*deck alignments for all the cards*/
+{
+    width: 660px;
+    min-height: 600px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card
+{
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open /*the format of open cards*/
+{
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show /*the format of cards which are showing*/
+{
+    font-size: 33px;
+}
+
+.deck .card.match /*format of cards which match*/
+{
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+.score-panel /*score panel*/
+{
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars /*the stars for rating*/
+{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart /*restart button*/
+{
+    float: right;
+    cursor: pointer;
+}
+
+.modal /*the modal box*/
+ {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  font-size: 40px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus
+{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.refreshAgain
+{
+  font: 30px garamond;
+
+}
